@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="촬영감독 유재문(Jaemoon Yu)의 촬영 포트폴리오. 단편영화 나들이, 홈 스윗 홈, 섬과 배, 작열하는 불꽃이자 숯, WHO AM I.">
+<meta property="og:title" content="Cinematographer 유재문 · Jaemoon Yu">
+<meta property="og:description" content="촬영감독 유재문(Jaemoon Yu)의 촬영 포트폴리오. 단편영화 나들이, 홈 스윗 홈, 섬과 배, 작열하는 불꽃이자 숯, WHO AM I.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jaemoonyu.github.io/">
+<meta property="og:image" content="https://jaemoonyu.github.io/stills/nadeuri-05.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://jaemoonyu.github.io/">
+<meta name="theme-color" content="#17191c">
+<title>유재문 촬영 포트폴리오</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a grading-suite page. Neutral surround, every image shown inside 1.85:1 frame lines, specs set like a camera report. */
+:root {
+  --bg: #17191c;          /* dim surround, slight blue bias like a grading room */
+  --surface: #1f2226;
+  --line: #34383e;
+  --fg: #e7e5e0;
+  --muted: #9a9c9f;
+  --accent: #d9a35b;      /* 3200K tungsten */
+  --todo: #6f8fb3;        /* placeholder marker, daylight blue */
+  --frame-a: #2a3038;
+  --frame-b: #3b3530;
+  --matte: #0a0a0b;       /* projection black, same in both themes */
+  --font-display: "Nanum Myeongjo", "AppleMyungjo", "Batang", serif;
+  --font-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #eceae6; --surface: #f6f5f2; --line: #d3d0ca; --fg: #1d1e20; --muted: #5f6164;
+    --accent: #a1661d; --todo: #3f6690; --frame-a: #c9ced4; --frame-b: #d8cfc4; color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #eceae6; --surface: #f6f5f2; --line: #d3d0ca; --fg: #1d1e20; --muted: #5f6164;
+  --accent: #a1661d; --todo: #3f6690; --frame-a: #c9ced4; --frame-b: #d8cfc4; color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1080px; margin: 0 auto; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.mono { font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; }
+.label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.todo { color: var(--todo); border-bottom: 1px dashed var(--todo); }
+
+/* header */
+header.top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px 24px; padding-block: 28px 20px; border-bottom: 1px solid var(--line); }
+.name { font-family: var(--font-display); font-weight: 800; font-size: 22px; letter-spacing: -.01em; }
+.name { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 18px; }
+.name small { font-family: var(--font-mono); font-weight: 400; font-size: 11px; color: var(--muted); margin-left: 8px; letter-spacing: .1em; }
+.name .role { font-family: var(--font-display); font-weight: 700; font-size: clamp(22px, 3.2vw, 30px); color: var(--accent); letter-spacing: .01em; line-height: 1.1; }
+.hero[hidden] + section { border-top: 0; padding-top: 40px; }
+nav { display: flex; gap: 20px; flex-wrap: wrap; }
+nav a { text-decoration: none; font-family: var(--font-mono); font-size: 12px; letter-spacing: .1em; color: var(--muted); }
+nav a:hover { color: var(--fg); }
+
+/* frame with 1.85 frame lines */
+.frame { position: relative; aspect-ratio: 1.85 / 1; max-width: 100%; width: 100%; overflow: hidden;
+  background: radial-gradient(120% 140% at 78% 30%, var(--frame-b), transparent 60%), linear-gradient(160deg, var(--frame-a), var(--surface)); }
+.frame::before, .frame::after { content: ""; position: absolute; width: 22px; height: 22px; border-color: var(--muted); border-style: solid; opacity: .7; }
+.frame::before { top: 12px; left: 12px; border-width: 1px 0 0 1px; }
+.frame::after { bottom: 12px; right: 12px; border-width: 0 1px 1px 0; }
+.frame .tc { position: absolute; left: 16px; bottom: 12px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; color: var(--muted); }
+.frame .tag { position: absolute; right: 16px; top: 12px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; color: var(--muted); }
+
+/* hero */
+.hero { padding-block: 40px 56px; display: grid; gap: 28px; }
+.hero h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(34px, 6vw, 60px); line-height: 1.1; margin: 0; letter-spacing: -.01em; }
+.reel .center { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; gap: 10px; padding: 16px; }
+.play { width: 58px; height: 58px; border: 1px solid var(--fg); border-radius: 50%; display: grid; place-items: center; margin: 0 auto; opacity: .85; }
+.play::after { content: ""; border-left: 14px solid var(--fg); border-top: 9px solid transparent; border-bottom: 9px solid transparent; margin-left: 4px; }
+.reel-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; }
+
+/* sections */
+section { padding-block: 56px; border-top: 1px solid var(--line); }
+.sec-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.sec-head h2 { font-family: var(--font-display); font-size: 26px; margin: 0; font-weight: 700; }
+
+/* works */
+.works { display: grid; gap: 64px; }
+.work { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+.work h3 { font-family: var(--font-display); font-size: 24px; margin: 0; font-weight: 800; line-height: 1.3; }
+.work .en { font-family: var(--font-mono); font-size: 12px; color: var(--muted); letter-spacing: .08em; }
+.work p { margin: 14px 0 0; color: var(--muted); max-width: 60ch; }
+.stills { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 6px; }
+.stills .frame::before, .stills .frame::after { display: none; }
+.stills .frame .tc { left: 6px; bottom: 4px; font-size: 9px; }
+.frame.shot { background: var(--matte); }
+.frame.shot::before, .frame.shot::after { display: none; }
+.frame.shot { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+.frame.shot img { pointer-events: none; -webkit-user-drag: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+.frame.shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; }
+
+.chip { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; padding: 3px 9px; border: 1px solid var(--line); border-radius: 2px; color: var(--muted); margin-top: 12px; }
+.chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.chip.private { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+
+dl.specs { margin: 18px 0 0; display: grid; grid-template-columns: max-content minmax(0, 1fr); border-top: 1px solid var(--line); }
+dl.specs dt, dl.specs dd { margin: 0; padding: 7px 0; border-bottom: 1px solid var(--line); }
+dl.specs dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); padding-right: 18px; padding-top: 9px; }
+dl.specs dd { font-size: 14px; }
+
+.work p.credits { margin-top: 12px; font-size: 12px; color: var(--muted); line-height: 1.6; }
+.credits span { font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; margin-right: 4px; opacity: .8; }
+.credits .sep { margin: 0 8px; }
+.links { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; }
+.links a { font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em; text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
+
+/* about / contact */
+.about { display: block; }
+.about ul.lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; max-width: 58ch; }
+.about ul.lines li { font-size: 16px; line-height: 1.6; display: flex; gap: 12px; }
+.about ul.lines li::before { content: "·"; color: var(--accent); font-weight: 700; }
+.contact-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.contact-row .val { font-family: var(--font-mono); font-size: 14px; user-select: all; overflow-wrap: anywhere; min-width: 0; }
+.contact-row .label { width: 90px; }
+button.copy { margin-left: auto; font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; background: transparent; color: var(--fg); border: 1px solid var(--line); padding: 4px 10px; cursor: pointer; border-radius: 2px; }
+button.copy:hover { border-color: var(--accent); }
+
+footer { padding-block: 32px 48px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+.note { margin-top: 40px; padding: 14px 16px; border: 1px dashed var(--todo); color: var(--muted); font-size: 13px; }
+.note b { color: var(--todo); font-weight: 600; }
+
+.stills.gallery { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.stills.gallery button.frame { padding: 0; border: 0; cursor: pointer; opacity: .55; transition: opacity .2s; }
+.stills.gallery button.frame:hover { opacity: .85; }
+.stills.gallery button.frame[aria-pressed="true"] { opacity: 1; box-shadow: inset 0 0 0 2px var(--accent); }
+.stills.gallery button.frame[aria-pressed="true"] img { padding: 2px; }
+.work .frame.shot.main img { transition: opacity .25s ease; }
+.work .frame.shot.main img.swap { opacity: 0; }
+@media (max-width: 760px) { .stills.gallery { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; } }
+@media (max-width: 760px) {
+  .work, .about { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .stills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .play { transition: transform .3s ease, opacity .3s; }
+  .reel:hover .play { transform: scale(1.06); opacity: 1; }
+}
+
+/* site-only additions */
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+.links button.play-film { font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em; color: var(--bg); background: var(--accent); border: 0; border-radius: 2px; padding: 6px 12px; cursor: pointer; }
+.links button.play-film:hover { filter: brightness(1.08); }
+.links { align-items: center; }
+.frame.shot iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: var(--matte); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div class="name"><span class="role">Cinematographer</span><span class="who">유재문<small>JAEMOON YU</small></span></div>
+    <nav>
+      <a href="#reel" hidden>REEL</a>
+      <a href="#works">WORKS</a>
+      <a href="#about">ABOUT</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="reel" hidden>
+    <div class="frame reel" role="img" aria-label="쇼릴 자리" hidden>
+      <span class="tag">1.85 : 1</span>
+      <div class="center">
+        <div class="play" aria-hidden="true"></div>
+        <div class="label">Showreel 2026 · 편집 예정</div>
+      </div>
+      <span class="tc">TC 00:00:00:00 · 01:30</span>
+    </div>
+    <div class="reel-meta" hidden>
+      <span class="label">릴은 5편 소스가 모이면 1분 30초 내외로 편집</span>
+      <span class="label">YouTube 일부공개 · 4K 업로드</span>
+    </div>
+  </div>
+
+  <section id="works">
+    <div class="sec-head">
+      <h2>작품</h2>
+      <span class="label">Selected Works · 5</span>
+    </div>
+
+    <div class="works">
+      <article class="work">
+        <div>
+          <div class="frame shot"><img src="stills/nadeuri-05.jpg" alt="나들이 스틸: 해 질 무렵 빨간 기둥 앞에 선 노인"></div>
+          <div class="stills"><div class="frame shot"><img src="stills/nadeuri-01.jpg" alt="나들이 스틸: 식탁에서 편지를 쓰는 노인" loading="lazy"></div><div class="frame shot"><img src="stills/nadeuri-02.jpg" alt="나들이 스틸: 풀숲에 앉은 두 사람" loading="lazy"></div><div class="frame shot"><img src="stills/nadeuri-03.jpg" alt="나들이 스틸: 공원 테이블에 마주 앉은 두 사람" loading="lazy"></div><div class="frame shot"><img src="stills/nadeuri-04.jpg" alt="나들이 스틸: 장미 아치 앞의 남자" loading="lazy"></div></div>
+        </div>
+        <div>
+          <span class="label">2026 · 단편 극영화 · 25분</span>
+          <h3>나들이</h3>
+          <div class="en">A DAY OUT</div>
+          <p>일찍 세상을 떠난 아내에게 매주 편지를 써 온 할아버지는 어느 봄날 처음으로 그 편지를 직접 부치러 나서고, 젊은 시절의 모습으로 상상 속 아내와 서울을 거니는 나들이를 떠난다.</p>
+          <dl class="specs">
+            <dt>Role</dt><dd>Director · Director of Photography · Editor · Colorist</dd>
+            <dt>Camera</dt><dd>ARRI ALEXA Mini LF, ALEXA Mini</dd>
+            <dt>Lenses</dt><dd>Cooke Anamorphic/i FF+ 1.8x SF 50mm T2.3, Cooke Panchro/i Classic</dd>
+            <dt>Format</dt><dd>3.4K · 1.55:1, 2.79:1</dd>
+          </dl>
+          <p class="credits"><span>감독</span> 유재문<span class="sep">·</span><span>제작</span> 경희대학교</p>
+        </div>
+      </article>
+      <article class="work">
+        <div>
+          <div class="frame shot"><img src="stills/home-01.jpg" alt="홈 스윗 홈 스틸: 마른 잔디 언덕 앞 벤치에 홀로 앉은 뒷모습" loading="lazy"></div>
+          <div class="stills"><div class="frame shot"><img src="stills/home-02.jpg" alt="홈 스윗 홈 스틸: 의자 너머로 돌아보는 여자" loading="lazy"></div><div class="frame shot"><img src="stills/home-03.jpg" alt="홈 스윗 홈 스틸: 책상에 턱을 괴고 앉은 지희" loading="lazy"></div><div class="frame shot"><img src="stills/home-04.jpg" alt="홈 스윗 홈 스틸: 책상 아래에 주저앉아 놀란 표정의 여자" loading="lazy"></div><div class="frame shot"><img src="stills/home-05.jpg" alt="홈 스윗 홈 스틸: 감자를 나눠 먹는 두 룸메이트" loading="lazy"></div></div>
+        </div>
+        <div>
+          <span class="label">2026 · 단편 극영화 · 30분</span>
+          <h3>홈 스윗 홈</h3>
+          <p>글이 막힌 작가 지망생 지희는 룸메이트 소혜의 글을 몰래 읽다가 그것이 자기 글이라는 확신에 빠진다.</p>
+          <dl class="specs">
+            <dt>Role</dt><dd>Director of Photography</dd>
+            <dt>Camera</dt><dd>Sony FX6</dd>
+            <dt>Lenses</dt><dd>Cooke SP3</dd>
+            <dt>Format</dt><dd>4K · 1.89:1</dd>
+          </dl>
+          <p class="credits"><span>감독</span> 이상헌, 김서영<span class="sep">·</span><span>제작</span> 경희대학교 영화제작동아리 그림자놀이</p>
+        </div>
+      </article>
+      <article class="work">
+        <div>
+          <div class="frame shot"><img src="stills/seom-05.jpg" alt="섬과 배 스틸: 밤의 개울에 촛불 종이배를 띄우는 남자" loading="lazy"></div>
+          <div class="stills"><div class="frame shot"><img src="stills/seom-01.jpg" alt="섬과 배 스틸: 빨랫줄에 걸린 사진들 앞에 선 남자의 뒷모습" loading="lazy"></div><div class="frame shot"><img src="stills/seom-02.jpg" alt="섬과 배 스틸: 창가 역광 속 화분을 든 남자" loading="lazy"></div><div class="frame shot"><img src="stills/seom-03.jpg" alt="섬과 배 스틸: 유리창을 사이에 두고 창을 닦는 두 사람" loading="lazy"></div><div class="frame shot"><img src="stills/seom-04.jpg" alt="섬과 배 스틸: 마당의 대야에 함께 발을 담근 두 사람" loading="lazy"></div></div>
+        </div>
+        <div>
+          <span class="label">2025 · 단편 극영화 · 20분</span>
+          <h3>섬과 배</h3>
+          <p>헤어진 연인의 흔적을 지우지 못한 채 청소 업체에 취업한 재서 앞에, 그녀를 닮은 지선이 나타난다.</p>
+          <dl class="specs">
+            <dt>Role</dt><dd>Director of Photography</dd>
+            <dt>Camera</dt><dd>Sony FX6</dd>
+            <dt>Lenses</dt><dd>Canon Cine Prime</dd>
+            <dt>Format</dt><dd>4K · 1.78:1</dd>
+          </dl>
+          <p class="credits"><span>감독</span> 윤태양<span class="sep">·</span><span>제작</span> 경희대학교 영화제작동아리 그림자놀이</p>
+          <div class="links"><button class="play-film" type="button" data-yt="jHewFXocWCo">영상 재생 ▶</button><a href="https://youtu.be/jHewFXocWCo" target="_blank" rel="noopener">YouTube에서 보기 ↗</a></div>
+        </div>
+      </article>
+      <article class="work">
+        <div>
+          <div class="frame shot"><img src="stills/jakyeol-01.jpg" alt="작열하는 불꽃이자 숯 스틸: 피가 튄 얼굴의 클로즈업" loading="lazy"></div>
+          <div class="stills"><div class="frame shot"><img src="stills/jakyeol-02.jpg" alt="작열하는 불꽃이자 숯 스틸: 테이블에 마주 앉아 웃는 두 사람" loading="lazy"></div><div class="frame shot"><img src="stills/jakyeol-03.jpg" alt="작열하는 불꽃이자 숯 스틸: 해부학 그림이 붙은 벽 앞의 흑백 실루엣" loading="lazy"></div><div class="frame shot"><img src="stills/jakyeol-04.jpg" alt="작열하는 불꽃이자 숯 스틸: 로우 앵글로 내려다보는 남자" loading="lazy"></div><div class="frame shot"><img src="stills/jakyeol-05.jpg" alt="작열하는 불꽃이자 숯 스틸: 욕실 바닥에 주저앉은 남자의 부감" loading="lazy"></div></div>
+        </div>
+        <div>
+          <span class="label">2025 · 단편 극영화 · 24분</span>
+          <h3>작열하는 불꽃이자 숯</h3>
+          <p>악을 행하고서야 부정하는 자와, 행하지 않았으니 부정하지 않는 자. 무엇이 더한 악일까?</p>
+          <dl class="specs">
+            <dt>Role</dt><dd>Director of Photography</dd>
+            <dt>Camera</dt><dd>Sony FX3</dd>
+            <dt>Lenses</dt><dd>Sony G Master</dd>
+            <dt>Format</dt><dd>4K · 2.35:1</dd>
+          </dl>
+          <p class="credits"><span>감독</span> 김승주<span class="sep">·</span><span>제작</span> 경희대학교 영화제작동아리 그림자놀이</p>
+          <div class="links"><button class="play-film" type="button" data-yt="ImzeU4TivNY">영상 재생 ▶</button><a href="https://youtu.be/ImzeU4TivNY" target="_blank" rel="noopener">YouTube에서 보기 ↗</a></div>
+        </div>
+      </article>
+      <article class="work">
+        <div>
+          <div class="frame shot"><img src="stills/whoami-05.jpg" alt="WHO AM I 스틸: 횡단보도 건너편 정장 차림의 남자를 가리키는 두 사람" loading="lazy"></div>
+          <div class="stills"><div class="frame shot"><img src="stills/whoami-01.jpg" alt="WHO AM I 스틸: 빨래방에서 얼굴을 감싼 남자" loading="lazy"></div><div class="frame shot"><img src="stills/whoami-02.jpg" alt="WHO AM I 스틸: 우편함 앞에서 편지를 보는 남자" loading="lazy"></div><div class="frame shot"><img src="stills/whoami-03.jpg" alt="WHO AM I 스틸: 상자를 들고 계단을 내려오는 실루엣" loading="lazy"></div><div class="frame shot"><img src="stills/whoami-04.jpg" alt="WHO AM I 스틸: 빈 당구장에 선 남자의 뒷모습" loading="lazy"></div></div>
+        </div>
+        <div>
+          <span class="label">2024 · 단편 극영화 · 13분</span>
+          <h3>WHO AM I</h3>
+          <p>검은 양복의 남자가 나타난 뒤 자신이 찍힌 의문의 사진을 받기 시작한 청년은, 기억과 현실이 사진 속 모습대로 바뀌어 가는 것을 목격한다.</p>
+          <dl class="specs">
+            <dt>Role</dt><dd>Director of Photography · Editor</dd>
+            <dt>Camera</dt><dd>Sony FX3</dd>
+            <dt>Lenses</dt><dd>Sony G Master</dd>
+            <dt>Format</dt><dd>4K · 1.78:1</dd>
+          </dl>
+          <p class="credits"><span>감독</span> 이서정<span class="sep">·</span><span>제작</span> 경희대학교 영화제작동아리 그림자놀이</p>
+          <div class="links"><button class="play-film" type="button" data-yt="uuRjdIBHs3s">영상 재생 ▶</button><a href="https://youtu.be/uuRjdIBHs3s" target="_blank" rel="noopener">YouTube에서 보기 ↗</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="sec-head">
+      <h2>소개</h2>
+      <span class="label">About</span>
+    </div>
+    <div class="about">
+      <ul class="lines">
+        <li>경희대학교 미디어학과 재학</li>
+        <li>경희대학교 영화제작동아리 그림자놀이(2024~)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="sec-head">
+      <h2>연락</h2>
+      <span class="label">Contact</span>
+    </div>
+    <div>
+      <div class="contact-row">
+        <span class="label">Email</span>
+        <span class="val" id="email">0615jm@naver.com</span>
+        <button class="copy" id="copy-email" type="button">복사</button>
+      </div>
+      <div class="contact-row">
+        <span class="label">Instagram</span>
+        <a class="val" href="https://www.instagram.com/dbwoans/" target="_blank" rel="noopener">@dbwoans</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="label">© 2026 Jaemoon Yu</span>
+    <span class="label">Seoul</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-email');
+  var el = document.getElementById('email');
+  btn.addEventListener('click', function () {
+    var text = el.textContent;
+    function selectIt() {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = '선택됨';
+    }
+    try {
+      navigator.clipboard.writeText(text).then(function () { btn.textContent = '복사됨'; }, selectIt);
+    } catch (e) { selectIt(); }
+    setTimeout(function () { btn.textContent = '복사'; }, 1800);
+  });
+})();
+</script>
+
+<script>
+(function () {
+  document.querySelectorAll('.work').forEach(function (work) {
+    var main = work.querySelector(':scope > div > .frame.shot');
+    var strip = work.querySelector(':scope > div > .stills');
+    if (!main || !strip) return;
+    var mainImg = main.querySelector('img');
+    var shots = [{ src: mainImg.getAttribute('src'), alt: mainImg.alt }];
+    strip.querySelectorAll('img').forEach(function (im) { shots.push({ src: im.getAttribute('src'), alt: im.alt }); });
+    main.classList.add('main');
+    strip.classList.add('gallery');
+    strip.innerHTML = '';
+    shots.forEach(function (shot, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'frame shot';
+      b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+      b.setAttribute('aria-label', '스틸 ' + (i + 1) + ' 크게 보기');
+      var im = document.createElement('img');
+      im.src = shot.src; im.alt = ''; im.loading = 'lazy';
+      b.appendChild(im);
+      b.addEventListener('click', function () {
+        if (b.getAttribute('aria-pressed') === 'true') return;
+        strip.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+        b.setAttribute('aria-pressed', 'true');
+        mainImg.classList.add('swap');
+        setTimeout(function () {
+          mainImg.src = shot.src; mainImg.alt = shot.alt;
+          mainImg.classList.remove('swap');
+        }, 180);
+      });
+      strip.appendChild(b);
+    });
+  });
+})();
+</script>
+
+<script>
+(function () {
+  function guard(e) { if (e.target.closest && e.target.closest('.frame.shot')) e.preventDefault(); }
+  document.addEventListener('contextmenu', guard);
+  document.addEventListener('dragstart', guard);
+  document.querySelectorAll('.frame.shot img').forEach(function (im) { im.setAttribute('draggable', 'false'); });
+})();
+</script>
+
+<script>
+(function () {
+  document.querySelectorAll('.play-film').forEach(function (btn) {
+    var work = btn.closest('.work');
+    var main = work && work.querySelector('.frame.shot.main, :scope > div > .frame.shot');
+    if (!main) return;
+    var img = main.querySelector('img');
+    var strip = work.querySelector('.stills');
+    function stop() {
+      var f = main.querySelector('iframe');
+      if (f) f.remove();
+      if (img) img.hidden = false;
+    }
+    btn.addEventListener('click', function () {
+      if (main.querySelector('iframe')) return;
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + btn.dataset.yt + '?autoplay=1&rel=0&playsinline=1';
+      f.title = (work.querySelector('h3') || {}).textContent + ' 영상';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      if (img) img.hidden = true;
+      main.appendChild(f);
+      if (strip) strip.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+      main.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    if (strip) strip.addEventListener('click', stop, true);
+  });
+})();
+</script>
+</body>
+</html>
